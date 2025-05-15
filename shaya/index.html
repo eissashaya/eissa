@@ -23,9 +23,24 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-GEB43FT1P2');
 
+  // Night/Day mode auto by time (fix: run after DOMContentLoaded)
+  function setNightModeByTime() {
+    const hour = new Date().getHours();
+    const body = document.body;
+    if (hour >= 18 || hour < 6) {
+      body.classList.add('night-mode');
+    } else {
+      body.classList.remove('night-mode');
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    setNightModeByTime();
+    document.getElementById('nightModeBtn').addEventListener('click', function() {
+      document.body.classList.toggle('night-mode');
+    });
+  });
 </script>
 
 </head>
@@ -44,7 +59,8 @@
                 <a href="https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/967776295164"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/967776295164" id="copyWhatsapp" data-copy="967776295164"><i class="fab fa-whatsapp"></i></a>
+                <button id="copyWhatsappBtn" title="نسخ رقم الواتساب" style="background:none;border:none;cursor:pointer;"><i class="fa fa-copy"></i></button>
             </div>
             <i id="btnMenu" class="fa fa-bars"></i>
         </nav>
@@ -59,7 +75,8 @@
                 <a href="https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-telegram"></i></a>
                 <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/967776295164"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/967776295164" id="copyWhatsapp2" data-copy="967776295164"><i class="fab fa-whatsapp"></i></a>
+                <button id="copyWhatsappBtn2" title="نسخ رقم الواتساب" style="background:none;border:none;cursor:pointer;"><i class="fa fa-copy"></i></button>
             </div>
         </div>
     </section>
@@ -121,5 +138,26 @@
     </button>
  
     <script src="eissa.js"></script>
+    <script>
+    // Copy WhatsApp number
+    function copyWhatsappNumber(btnId, linkId) {
+      const btn = document.getElementById(btnId);
+      const link = document.getElementById(linkId);
+      if (btn && link) {
+        btn.addEventListener('click', function() {
+          const number = link.getAttribute('data-copy');
+          navigator.clipboard.writeText(number);
+          btn.classList.add('copied');
+          btn.innerHTML = '✔';
+          setTimeout(()=>{
+            btn.innerHTML = '<i class="fa fa-copy"></i>';
+            btn.classList.remove('copied');
+          }, 1200);
+        });
+      }
+    }
+    copyWhatsappNumber('copyWhatsappBtn', 'copyWhatsapp');
+    copyWhatsappNumber('copyWhatsappBtn2', 'copyWhatsapp2');
+    </script>
 </body>
 </html>
