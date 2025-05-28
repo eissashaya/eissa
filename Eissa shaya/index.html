@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>موقع المبرمج عيسى شايع</title>
+    
+    <meta  name="keywords"  content="المبرمج عيسى , المهندس عيسى  , عيسى ابراهيم شايع  , "        />
+    <meta  name="description"   content=" الصفحة الرئيسيه - مطور مواقع ويب - احترافي برمجة تطبيقات موبايل..."      />
+    <meta name="google-site-verification" content="b-6zY1_e7PuuYkq-VMB1gA_kcIEIxUHpAEFM_BJbfTc" />
+    <meta content='عيسى شايع
+    المبرمج عيسى
+    المطور عيسى
+    المطور عيسى شايع
+    المبرمج عيسى ابراهيم
+    تطبيقات عيسى شايع' name='description'/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB43FT1P2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GEB43FT1P2');
+
+  // Night/Day mode auto by time (fix: run after DOMContentLoaded)
+  function setNightModeByTime() {
+    const hour = new Date().getHours();
+    const body = document.body;
+    if (hour >= 18 || hour < 6) {
+      body.classList.add('night-mode');
+    } else {
+      body.classList.remove('night-mode');
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    setNightModeByTime();
+    document.getElementById('nightModeBtn').addEventListener('click', function() {
+      document.body.classList.toggle('night-mode');
+    });
+  });
+</script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="nightModeBtn" class="night-mode-btn"><i class="fa fa-moon"></i></button>
+            <input type="text" id="searchBar" class="search-bar" placeholder="ابحث عن الكورس...">
+           
+            <ul class="links">
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li><a href="#icn">اتصل بنا</a></li>
+                <li><a href="abut.html">About Me</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/967776295164" id="copyWhatsapp" data-copy="967776295164"><i class="fab fa-whatsapp"></i></a>
+                <button id="copyWhatsappBtn" title="نسخ رقم الواتساب" style="background:none;border:none;cursor:pointer;"><i class="fa fa-copy"></i></button>
+            </div>
+            <i id="btnMenu" class="fa fa-bars"></i>
+        </nav>
+    </header>
+    
+    <section class="main">
+        <div>
+            <h1>موقع المبرمج<br><span>م/عيسى شايع</span></h1>
+            <h3>مطور مواقع ويب - احترافي برمجة تطبيقات موبايل</h3>
+            
+            <div class="social-icon" id="icn">
+                <a href="https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/967776295164" id="copyWhatsapp2" data-copy="967776295164"><i class="fab fa-whatsapp"></i></a>
+                <button id="copyWhatsappBtn2" title="نسخ رقم الواتساب" style="background:none;border:none;cursor:pointer;"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cards" id="services">
+        <h2 class="title">Courses</h2>
+        <div class="content">
+            <div class="card">
+                <img src="imgs/image.png" alt="Python Course">
+                <div class="info">
+                    <h3><a href="pyhon.html">أساسيات بايثون</a></h3>
+                    <p>غالباً ما يُنصح المبتدئون في ميدان البرمجة بتعلم هذه اللغة لأنها من بين أسرع اللغات البرمجية تعلماً.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imgs/image44.jpg" alt="C++ Course">
+                <div class="info">
+                    <h3><a href="c++.html">أساسيات C++</a></h3>
+                    <p>هي لغة برمجة ذات طابع عام وتستخدم في تطوير البرمجيات عالية الأداء.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" style="position:fixed;bottom:30px;right:30px;z-index:9999;min-width:120px;padding:12px 24px;background:#232a36;color:#ffe082;border-radius:8px;box-shadow:0 2px 8px #0002;display:none;font-size:1.1em;transition:opacity 0.3s;opacity:0;text-align:center;">تم النسخ!</div>
+
+    <div class="widget-content">
+        <div class="about-content">
+            <div class="footer-logo custom-image">
+                <a href="index.html">
+                    <img alt="موقع المبرمج عيسى شايع" height="100" src="IMG_20240708_031113_033.jpg" width="100" />
+                </a>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/967776295164"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="bio-data">
+                <h3 class="title">موقع المبرمج عيسى شايع</h3>
+                <span class="image-caption">مطور مواقع ويب - احترافي برمجة تطبيقات موبايل</span>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p class="footer-title">
+            <span><a href="abut.html">...اضغط هنا لمعرفة المزيد</a></span>
+        </p>
+        <br>
+        <p class="footer-title">
+            <span style="color:#ffe082;font-weight:bold;font-size:1.1em;"><i class="fa fa-copyright"></i> جميع الحقوق محفوظة &ndash; المبرمج <a href="index.html" style="color:#b3c6e0;font-weight:bold;">م/عيسى شايع</a> <span style="font-size:0.9em;">2025</span></span>
+        </p>
+        <div style="margin-top:10px; margin-bottom: 70px;">
+            <span style="color:#ffe082;">تابعني على:</span>
+            <a href="https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi" style="color:#4267B2;margin:0 6px;"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" style="color:#229ED9;margin:0 6px;"><i class="fab fa-telegram fa-lg"></i></a>
+            <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag" style="color:#E1306C;margin:0 6px;"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://wa.me/967776295164" style="color:#25D366;margin:0 6px;"><i class="fab fa-whatsapp fa-lg"></i></a>
+        </div>
+    </footer>
+    
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>  
+    </button>
+ 
+    <script src="eissa.js"></script>
+    <script>
+    // Toast function
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.style.display = 'block';
+      setTimeout(()=>{toast.style.opacity = 1;}, 10);
+      setTimeout(()=>{
+        toast.style.opacity = 0;
+        setTimeout(()=>{toast.style.display = 'none';}, 400);
+      }, 1200);
+    }
+    // Copy WhatsApp number
+    function copyWhatsappNumber(btnId, linkId) {
+      const btn = document.getElementById(btnId);
+      const link = document.getElementById(linkId);
+      if (btn && link) {
+        btn.addEventListener('click', function() {
+          const number = link.getAttribute('data-copy');
+          navigator.clipboard.writeText(number);
+          btn.classList.add('copied');
+          btn.innerHTML = '✔';
+          showToast('تم نسخ الرقم!');
+          setTimeout(()=>{
+            btn.innerHTML = '<i class="fa fa-copy"></i>';
+            btn.classList.remove('copied');
+          }, 1200);
+        });
+      }
+    }
+    copyWhatsappNumber('copyWhatsappBtn', 'copyWhatsapp');
+    copyWhatsappNumber('copyWhatsappBtn2', 'copyWhatsapp2');
+    // Scroll to top button show/hide
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', function() {
+      if(window.scrollY > 200) {
+        scrollBtn.style.display = 'flex';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    });
+    // Responsive nav close on link click
+    const navLinks = document.querySelectorAll('nav .links a');
+    const navList = document.querySelector('nav .links');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth <= 980 && navList.classList.contains('active')) {
+          navList.classList.remove('active');
+        }
+      });
+    });
+    </script>
+</body>
+</html>
