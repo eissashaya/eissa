@@ -54,11 +54,125 @@ header nav .social-icons a i {
     font-size: 24px;
     margin-left: 15px;
 }
-body.night-mode {
-    background-color: #121212;
-    color: #f1f1f1;
+
+.social-icons button,
+.social-icon button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 1.3em;
+    color: #007bff;
+    transition: color 0.3s, transform 0.2s;
+    vertical-align: middle;
+    outline: none;
 }
 
+.social-icons button:active,
+.social-icon button:active {
+    color: #ffe082;
+    transform: scale(1.2);
+}
+
+.social-icons button.copied,
+.social-icon button.copied {
+    color: #43a047;
+    animation: copied-bounce 0.5s;
+}
+
+@keyframes copied-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+body.night-mode {
+    background-color: #181c24 !important;
+    color: #e0e6f0 !important;
+}
+
+body.night-mode header {
+    background-color: #232a36 !important;
+    border-bottom: 1px solid #2d3642 !important;
+}
+
+body.night-mode nav .links li a {
+    color: #b3c6e0 !important;
+}
+
+body.night-mode .main {
+    background: linear-gradient(135deg, #232a36, #2d3642) !important;
+    color: #ffe082 !important;
+}
+
+body.night-mode .main h1 span {
+    color: #ffe082 !important;
+}
+
+body.night-mode .main h3 {
+    color: #e0e6f0 !important;
+}
+
+body.night-mode .social-icon a {
+    background-color: #232a36 !important;
+    color: #ffe082 !important;
+    border: 1px solid #3a4252 !important;
+}
+
+body.night-mode .social-icon a:hover {
+    background-color: #ffe082 !important;
+    color: #232a36 !important;
+}
+
+body.night-mode .card {
+    background-color: #232a36 !important;
+    color: #e0e6f0 !important;
+    box-shadow: 0 5px 25px rgba(20, 20, 30, 0.25) !important;
+}
+
+body.night-mode .info h3 {
+    color: #ffe082 !important;
+}
+
+body.night-mode .widget-content {
+    background-color: #232a36 !important;
+    color: #e0e6f0 !important;
+    border: 1px solid #2d3642 !important;
+}
+
+body.night-mode .footer {
+    background-color: #232a36 !important;
+    color: #ffe082 !important;
+}
+
+body.night-mode .footer .footer-title span a {
+    color: #ffe082 !important;
+}
+
+body.night-mode #scrollToTopBtn {
+    background-color: #ffe082 !important;
+    color: #232a36 !important;
+}
+
+body.night-mode #scrollToTopBtn:hover {
+    background-color: #ffd54f !important;
+}
+
+body.night-mode .search-bar {
+    background: #232a36 !important;
+    color: #ffe082 !important;
+    border: 1px solid #3a4252 !important;
+}
+
+body.night-mode .social-icons button,
+body.night-mode .social-icon button {
+    color: #ffe082 !important;
+}
+
+body.night-mode .social-icons button:active,
+body.night-mode .social-icon button:active {
+    color: #43a047 !important;
+}
 
 section {
     padding: 100px 200px;
@@ -183,8 +297,6 @@ body {
     padding: 0;
 }
 
-
-
 #scrollToTopBtn {
     position: fixed;
     bottom: 15px;
@@ -265,7 +377,6 @@ body {
     text-decoration: underline;
 }
 
-
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -288,8 +399,6 @@ body {
     background-color: #0056b3;
 }
 
-
-
 @media (max-width: 980px) {
     header nav .links {
         position: absolute;
@@ -308,7 +417,6 @@ body {
     header nav .links.active {
         right: 0;
     }
-    
 
     .social-icons {
         display: none;

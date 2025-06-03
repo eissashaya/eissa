@@ -65,7 +65,7 @@ body {
   gap: 10px;
 }
 
-.social-icons li a {
+social-icons li a {
   color: #fff;
   font-size: 1.5rem;
   transition: color 0.3s ease;
@@ -78,26 +78,69 @@ body {
 /* قسم عني */
 .about-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  padding: 50px;
-  background-color: #ffffff;
-  margin: 20px 0;
-  box-shadow: 0 4px 6px var(--card-shadow);
+  justify-content: center;
+  gap: 40px;
+  background: linear-gradient(120deg, #232a36 80%, #2d3642 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  padding: 40px 0 30px 0;
+  margin: 40px 0 0 0;
 }
 
-.about-section h2 {
-  font-size: 2rem;
+.about-img {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-section span {
-  color: var(--primary-color);
+.about-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #ffe082;
+  box-shadow: 0 2px 12px #0003;
+  object-fit: cover;
+  background: #fff;
 }
 
-.about-section img {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--card-shadow);
+.about-content {
+  flex: 1 1 320px;
+  color: #e0e6f0;
+  background: #232a36cc;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 24px 28px;
+  min-width: 260px;
+  max-width: 600px;
+}
+
+.about-content h4 {
+  color: #ffe082;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.about-content h2 {
+  color: #ffe082;
+  font-size: 2em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.about-content h2 span {
+  color: #b3c6e0;
+  font-size: 0.8em;
+}
+
+.about-content p {
+  color: #e0e6f0;
+  font-size: 1.13em;
+  line-height: 2.1;
+  margin-bottom: 0;
 }
 
 /* قسم المشاريع */
@@ -161,12 +204,25 @@ body {
       text-align: center;
   }
 
-  .about-section {
-      flex-direction: column;
-      text-align: center;
-  }
-
   .projects-cards {
       flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 0 18px 0;
+  }
+
+  .about-content {
+    padding: 18px 10px;
+    max-width: 98vw;
+  }
+
+  .about-img img {
+    width: 120px;
+    height: 120px;
   }
 }
